@@ -1,0 +1,168 @@
+// start .sRepresent
+.sRepresent {
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(73)};
+		--sPB: #{rem(30px)};
+		--sTPB: #{rem(40)};
+	}
+	@include media-breakpoint-up(xl){
+		--sPB: #{rem(108px)};
+	}
+
+	&__row{
+		flex-direction: column-reverse;
+		@include media-breakpoint-up(md){
+			flex-direction: row;
+		}
+	}
+	//
+	&__img-col{
+		@include media-breakpoint-up(xl){
+			width: 43.521%;
+		}
+	}
+
+	&__img{
+		@extend .accept-ratio-frame-nh;
+		overflow: visible;
+		padding-top: (361/473) * 100%;
+
+		img{
+			z-index: 1;
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: 2;
+
+			right: rem(36);
+			bottom: rem(-20px);
+			width: rem(10px);
+			height: rem(100px);
+			@include media-breakpoint-up(lg){
+				right: rem(73);
+				bottom: rem(-40px);
+				width: rem(16px);
+				height: rem(162px);
+			}
+
+			background: $red;
+		}
+	}
+	&__shape{
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		left: 0;
+		//background-color: green;
+		background-color: $red;
+		mix-blend-mode: multiply;
+
+		height: 120.5%;
+		width: 70.85%;
+		@include media-breakpoint-up(md){
+			height: 150.5%;
+			width: 76%;
+		}
+		clip-path: polygon(0 48.5%,73% 0,100% 0,100% 34%,0 100%);
+	}
+
+	&__brick{
+		position: absolute;
+		z-index: 4;
+		background-color: $body-color;
+
+		top: calc(100% + 20px);
+		left: -36px;
+		width: rem(100px);
+		height: rem(9.5px);
+		@include media-breakpoint-up(lg){
+			top: calc(100% + 40px);
+			left: -74px;
+			width: rem(162px);
+			height: rem(14px);
+		}
+	}
+	//txt-col
+	&__txt-col{
+		//background-color: rgba(pink, .1);
+		@include media-breakpoint-up(xl){
+			width: 49.7%;
+			margin-left: auto;
+		}
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+		}
+	}
+
+	//section-title
+	.section-title{
+		padding-bottom: 10px;
+		h2{
+			font-weight: 900;
+			line-height: 1.5;
+			text-transform: uppercase;
+			margin-bottom: 0;
+
+			font-size: rem(18px);
+			@include media-breakpoint-up(xl){
+				font-size: rem(20px);
+			}
+		}
+		&__speak{
+			white-space: nowrap;
+			font-weight: 900;
+			line-height: 1;
+			text-transform: uppercase;
+			color: $red;
+
+			font-size: calc(35px + 15vw);
+			@include media-breakpoint-up(sm){
+				font-size: rem(130px);
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(105px);
+			}
+			@include media-breakpoint-up(lg){
+				font-size: rem(140px);
+			}
+			@include media-breakpoint-up(xl){
+				margin-left: rem(-7px);
+				font-size: rem(161.124px);
+			}
+			margin-bottom: rem(11px);
+		}
+		&__big{
+			font-weight: 900;
+
+			text-transform: uppercase;
+			color: $body-color;
+
+			line-height: 1.5;
+			font-size: rem(21px);
+			@include media-breakpoint-up(md){
+				font-size: rem(22px);
+				line-height: 1.18;
+			}
+			@include media-breakpoint-up(lg){
+				font-size: rem(26px);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: rem(30px);
+				margin-left: -3px;
+			}
+			margin-bottom: rem(18);
+		}
+		p{
+
+		}
+		//
+		&__{}
+		&__{}
+	}
+	//
+	&__{}
+	&__{}
+} // end.sRepresent

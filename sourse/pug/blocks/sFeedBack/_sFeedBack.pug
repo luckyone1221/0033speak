@@ -1,0 +1,43 @@
+mixin sFeedBack(data)
+	// start sFeedBack
+	+b.SECTION.sFeedBack.section#sFeedBack&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Отзывы
+			+e.slider
+				.swiper-container.feedback-slider-js
+					.swiper-wrapper
+						+feedBackSlide(1, 'Яковенко Наталья')
+							| Очень понравились секции и доклады! Хотелось бы, чтобы в одном потоке были пять разных направлений, чтобы потом не плакать, что пропустил очно смежный доклад. Хотя можно просто разорваться)))
+							|
+							br.d-none.d-xl-block
+							| В следующий раз десантируемся человеками побольше, чтобы все интересное сразу узнать!
+						+feedBackSlide(1, 'Яковенко Наталья2')
+							| Очень понравились секции и доклады! Хотелось бы, чтобы в одном потоке были пять разных направлений, чтобы потом не плакать, что пропустил очно смежный доклад. Хотя можно просто разорваться)))
+							|
+							br.d-none.d-xl-block
+							| В следующий раз десантируемся человеками побольше, чтобы все интересное сразу узнать!2
+						+feedBackSlide(1, 'Яковенко Наталья3')
+							| Очень понравились секции и доклады! Хотелось бы, чтобы в одном потоке были пять разных направлений, чтобы потом не плакать, что пропустил очно смежный доклад. Хотя можно просто разорваться)))
+							|
+							br.d-none.d-xl-block
+							| В следующий раз десантируемся человеками побольше, чтобы все интересное сразу узнать!3
+					+e.controll
+						+b.feedback-prev--js
+							+icon('chevron-left')
+						+b.feedback-fract--js
+						+b.feedback-next--js
+							+icon('chevron-right')
+	// end sFeedBack
+
+mixin feedBackSlide(imgNum, name)
+	.swiper-slide
+		+e.inner
+			+e.img-cont
+				+e.img
+					img.swiper-lazy(src="#" data-src=`img/@2x/feedback-${imgNum}.jpg` alt="")
+					+e.white-line.d-none.d-md-block
+			+e.txt
+				p
+					block
+				+e.name=name

@@ -254,7 +254,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = '01.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -308,7 +308,28 @@ function eventHandler() {
 			document.body.classList.add('loaded');
 			document.body.classList.remove('loaded_hiding');
 		}, 500);
-	};
+	}; //luckyoneJs
+
+
+	var feedBackSlider = new Swiper('.feedback-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		loop: true,
+		//lazy
+		lazy: {
+			loadPrevNext: true
+		},
+		//pagination
+		pagination: {
+			el: '.feedback-fract--js',
+			type: 'fraction'
+		},
+		//nav
+		navigation: {
+			nextEl: '.feedback-next--js',
+			prevEl: '.feedback-prev--js'
+		}
+	}); //end luckyoneJs
 }
 
 ;

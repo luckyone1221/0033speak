@@ -1,5 +1,53 @@
 mixin header()
 	// start header
 	+b.HEADER.header#header&attributes(attributes)
-		block
+		//-block
+		+pic('header-bg.jpg')(class='header__bg')
+		.container
+			+e.top-line
+				+e.logo(href='/')
+					img(src='img/@2x/small-logo.png' alt="СПИК 2021" title="СПИК 2021")
+				+e.menu-cont
+					+mnu()(class="d-lg-flex d-none")
+					+b.toggle-menu-mobile--js.d-lg-none
+						span
+					+e.user-btn(href='#')
+						+icon('user')
+			+e.row.row
+				+e.title-col.col-sm-4.col-xl-3
+					+b.section-title
+						h2
+							| Диджитал-событие,
+							br
+							| которое нельзя
+							br
+							| пропустить!
+					+e.date-bl
+						+e.d-numbers
+							span 27
+							span 28
+						+e.d-month
+							+e.d-img
+								img(loading="lazy" src="img/svg/horseman.svg" alt="")
+							+e.d-txt мая 2021
+					+e.address
+						+e.a-name Park Inn.
+						+e.a-street Прибалтийская
+						+e.a-city САНКТ-ПЕТЕРБУРГ
+				+e.glass-col.col-sm-8.col-xl-9
+					+e.red-bl
+						+e.red-inner
+						+e.red-grid
+					+e.red-bl-links
+						+e.links
+							+e.link--red
+								.title Я иду
+								.txt Регистрация
+							+e.link
+								.title
+									| ПРОГРАММА
+									br
+									| СПИК 2020
+			+e.number
+				+img('img/svg/twenty-one.svg')
 	// end header

@@ -24,30 +24,20 @@
 	</head>
 	<style>.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }</style>
 	<body class="loaded_hiding"> 
-		<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-		</div>
 		<div class="menu-mobile menu-mobile--js d-lg-none">
 			<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 			</div>
-			<div class="menu-mobile__inner">
+			<div class="menu-mobile__inner"><a class="menu-mobile__logo" href="/"><img src="img/@2x/small-logo.png" alt="СПИК 2021" title="СПИК 2021"/></a>
 				<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О конференции</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Программа</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Выставка</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Билеты</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
 					</li>
 				</ul>
 				<div class="text-right"></div>
@@ -56,54 +46,632 @@
 		<!--  мобильное меню-->
 		<!-- start header-->
 		<header class="header" id="header">
+			<!-- picture-->
+			<picture class="header__bg"> 
+				<source type="image/webp" srcset="img/@2x/webp/header-bg.webp"/>
+				<source type="image/webp" srcset="img/@1x/webp/header-bg.webp"/>
+				<source type="image/jpg" srcset="img/@2x/header-bg.jpg"/>
+				<source type="image/jpg" srcset="img/@1x/header-bg.jpg"/><img src="img/@2x/header-bg.jpg" alt="" loading="lazy"/>
+			</picture>
+			<!-- /picture-->
+			<div class="container">
+				<div class="header__top-line"><a class="header__logo" href="/"><img src="img/@2x/small-logo.png" alt="СПИК 2021" title="СПИК 2021"/></a>
+					<div class="header__menu-cont">
+						<ul class="navMenu d-lg-flex d-none" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О конференции</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Программа</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Выставка</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Билеты</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+							</li>
+						</ul>
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+						</div><a class="header__user-btn" href="#">
+						<svg class="icon icon-user ">
+							<use xlink:href="img/svg/sprite.svg#user"></use>
+						</svg></a>
+					</div>
+				</div>
+				<div class="header__row row">
+					<div class="header__title-col col-sm-4 col-xl-3">
+						<div class="section-title">
+							<h2>Диджитал-событие,<br/>которое нельзя<br/>пропустить!</h2>
+						</div>
+						<div class="header__date-bl">
+							<div class="header__d-numbers"><span>27</span><span>28</span>
+							</div>
+							<div class="header__d-month">
+								<div class="header__d-img"><img loading="lazy" src="img/svg/horseman.svg" alt=""/>
+								</div>
+								<div class="header__d-txt">мая 2021
+								</div>
+							</div>
+						</div>
+						<div class="header__address">
+							<div class="header__a-name">Park Inn.
+							</div>
+							<div class="header__a-street">Прибалтийская
+							</div>
+							<div class="header__a-city">САНКТ-ПЕТЕРБУРГ
+							</div>
+						</div>
+					</div>
+					<div class="header__glass-col col-sm-8 col-xl-9">
+						<div class="header__red-bl">
+							<div class="header__red-inner">
+							</div>
+							<div class="header__red-grid">
+							</div>
+						</div>
+						<div class="header__red-bl-links">
+							<div class="header__links">
+								<div class="header__link header__link--red">
+									<div class="title">Я иду</div>
+									<div class="txt">Регистрация</div>
+								</div>
+								<div class="header__link">
+									<div class="title">ПРОГРАММА<br/>СПИК 2020</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__number"><img src="img/svg/twenty-one.svg" alt="" loading="lazy"/>
+				</div>
+			</div>
 		</header>
 		<!-- end header-->
-		<!-- start top-nav-->
-		<div class="top-nav block-with-lazy">
+		<!-- start sRepresent-->
+		<section class="sRepresent section" id="sRepresent">
 			<div class="container">
-				<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- end top-nav-->
-		<!-- start topLine-->
-		<section class="topLine section" id="topLine">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>topLine</h2>
+				<div class="sRepresent__row row">
+					<div class="sRepresent__img-col col-md-5 col-xl-6">
+						<div class="sRepresent__img"><img src="img/@2x/represent-img.jpg" alt="" loading="lazy"/>
+							<div class="sRepresent__shape">
+							</div>
+							<div class="sRepresent__brick">
+							</div>
+						</div>
+					</div>
+					<div class="sRepresent__txt-col col-md-6 col-xl-6 offset-md-1 offset-xl-0">
+						<div class="section-title">
+							<h2>Санкт-Петербургская интернет-конференция</h2>
+							<div class="section-title__speak">СПИК –
+							</div>
+							<div class="section-title__big"><span>самое ожидаемое&nbsp;</span><span class="text-danger">IT-событие</span><br/><span>Северо-Запада.</span>
+							</div>
+							<p>
+								Кто хоть раз был на СПИКе, знает – это событие нельзя пропустить.
+								<br class="d-none d-xl-block"/>Ведь это самая масштабная конференция в сфере интернет-маркетинга и&nbsp;смежных отраслей в Северо-Западе.
+							</p>
+						</div>
+					</div>
 				</div>
-				<div class="row"></div>
 			</div>
 		</section>
-		<!-- end topLine-->
-		<!-- start headerBlock-->
-		<div class="headerBlock section" id="headerBlock">
+		<!-- end sRepresent-->
+		<!-- start sDigits-->
+		<section class="sDigits section" id="sDigits">
+			<!-- picture-->
+			<picture class="sDigits__bg-lg d-none d-lg-block"> 
+				<source type="image/webp" srcset="img/@2x/webp/digits-bg-lg.webp"/>
+				<source type="image/webp" srcset="img/@1x/webp/digits-bg-lg.webp"/>
+				<source type="image/png" srcset="img/@2x/digits-bg-lg.png"/>
+				<source type="image/png" srcset="img/@1x/digits-bg-lg.png"/><img src="img/@2x/digits-bg-lg.png" alt="" loading="lazy"/>
+			</picture>
+			<!-- /picture-->
 			<div class="container">
-				<div class="section-title text-center">
-					<h2>headerBlock ds dfsdfdsfsd</h2>
+				<div class="row">
+					<div class="sDigits__title-col col-lg-6">
+						<div class="section-title">
+							<h2><span class="text-danger">СПИК</span><span>в цифрах</span></h2>
+						</div>
+					</div>
+					<!-- picture-->
+					<picture class="sDigits__bg-sm d-lg-none"> 
+						<source type="image/webp" srcset="img/@2x/webp/digits-bg-sm.webp"/>
+						<source type="image/webp" srcset="img/@1x/webp/digits-bg-sm.webp"/>
+						<source type="image/jpg" srcset="img/@2x/digits-bg-sm.jpg"/>
+						<source type="image/jpg" srcset="img/@1x/digits-bg-sm.jpg"/><img src="img/@2x/digits-bg-sm.jpg" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+					<div class="sDigits__digits-col col-lg-6">
+						<div class="sDigits__red-cont">
+							<div class="sDigits__item">
+								<div class="sDigits__digit">14
+								</div>
+								<div class="sDigits__descr">успешных ежегодных конференций
+								</div>
+							</div>
+							<div class="sDigits__item">
+								<div class="sDigits__digit">3000
+								</div>
+								<div class="sDigits__descr">участников – ваших коллег, потенциальных клиентов и партнеров
+								</div>
+							</div>
+							<div class="sDigits__item">
+								<div class="sDigits__digit">2
+								</div>
+								<div class="sDigits__descr">дня обмена опытом и знаниями
+								</div>
+							</div>
+							<div class="sDigits__item">
+								<div class="sDigits__digit">5
+								</div>
+								<div class="sDigits__descr">потоков<br/>выступлений
+								</div>
+							</div>
+							<div class="sDigits__item">
+								<div class="sDigits__digit">20
+								</div>
+								<div class="sDigits__descr">часов общения и знакомств
+								</div>
+							</div>
+							<div class="sDigits__item">
+								<div class="sDigits__digit">250
+								</div>
+								<div class="sDigits__descr">спикеров
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="row"></div>
+			</div>
+		</section>
+		<!-- end sDigits-->
+		<!-- start sWho-->
+		<section class="sWho section" id="sWho">
+			<div class="container">
+				<div class="sWho__row row">
+					<div class="sWho__title-col col-md-6">
+						<div class="sWho__bg-cont">
+							<div class="sWho__bg">
+								<div class="sWho__black">
+								</div>
+								<!-- picture-->
+								<picture class="sWho__portrait"> 
+									<source type="image/webp" srcset="img/@2x/webp/who-img.webp"/>
+									<source type="image/webp" srcset="img/@1x/webp/who-img.webp"/>
+									<source type="image/jpg" srcset="img/@2x/who-img.jpg"/>
+									<source type="image/jpg" srcset="img/@1x/who-img.jpg"/><img src="img/@2x/who-img.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div>
+						</div>
+						<div class="section-title">
+							<h2><span class="text-xl text-danger">Кому</span><span class="text-md">нужно</span><span class="text-md">здесь</span><span class="text-md">быть</span></h2>
+						</div>
+					</div>
+					<div class="sWho__contnent-col col-md-6">
+						<ul>
+							<li class="sm-line">Маркетологи и PR-специалисты</li>
+							<li>Сотрудники IT-компаний и диджитал-стартапов</li>
+							<li>Владельцы, директора и топ-менеджеры компаний</li>
+							<li class="sm-line">Копирайтеры и журналисты</li>
+							<li>Специалисты по инфокоммуникациям и интернет-технологиям</li>
+							<li>Представители государственных структур и учебных заведений</li>
+							<li class="sm-line">Лидеры интернет-бизнеса</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sWho-->
+		<!-- start sProgram-->
+		<section class="sProgram section" id="sProgram">
+			<div class="container">
+				<div class="section-title">
+					<h2><span class="text-danger text-xl">Программа</span><span class="text-md">СПИК 2021</span></h2>
+					<p>Тематические секции собирают ключевые личности рунета, топовые эксперты с уникальным опытом и знаниями. Программа формируется с учетом трендов 2021 года, опыта прошлых лет и перспектив развития рынка.</p>
+				</div>
+				<div class="sProgram__row row">
+					<div class="sProgram__img-col col-md-6">
+						<!-- picture-->
+						<picture class="sProgram__img"> 
+							<source type="image/webp" srcset="img/@2x/webp/programm-bg.webp"/>
+							<source type="image/webp" srcset="img/@1x/webp/programm-bg.webp"/>
+							<source type="image/jpg" srcset="img/@2x/programm-bg.jpg"/>
+							<source type="image/jpg" srcset="img/@1x/programm-bg.jpg"/><img src="img/@2x/programm-bg.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
+					</div>
+					<div class="sProgram__content-col col-md-6">
+						<div class="sProgram__content">
+							<div class="sProgram__title">Что<br/>обсудим:
+							</div>
+							<ul>
+								<li>Контекстная и таргетированная реклама</li>
+								<li>SEO и мобильные технологии</li>
+								<li>SMM, контент-маркетинг и email-маркетинг</li>
+								<li>Ecommerce, B2B и выход на зарубежные рынки</li>
+								<li>Дизайн и юзабилити</li>
+								<li>IT-образование и менеджмент в сфере маркетинга</li>
+								<li>Веб-аналитика</li>
+								<li>Видеомаркетинг</li>
+								<li>PR и журналистика</li>
+							</ul>
+						</div><a class="sProgram__btn" href="#">ХОЧУ ВЫСТУПИТЬ</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sProgram-->
+		<!-- start sFeedBack-->
+		<section class="sFeedBack section" id="sFeedBack">
+			<div class="sFeedBack__container container">
+				<div class="section-title">
+					<h2>Отзывы</h2>
+				</div>
+				<div class="sFeedBack__slider">
+					<div class="swiper-container feedback-slider-js">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="sFeedBack__inner">
+									<div class="sFeedBack__img-cont">
+										<div class="sFeedBack__img"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-1.jpg" alt=""/>
+											<div class="sFeedBack__white-line d-none d-md-block">
+											</div>
+										</div>
+									</div>
+									<div class="sFeedBack__txt">
+										<p>
+											Очень понравились секции и доклады! Хотелось бы, чтобы в одном потоке были пять разных направлений, чтобы потом не плакать, что пропустил очно смежный доклад. Хотя можно просто разорваться)))
+											<br class="d-none d-xl-block"/>В следующий раз десантируемся человеками побольше, чтобы все интересное сразу узнать!
+										</p>
+										<div class="sFeedBack__name">Яковенко Наталья
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="sFeedBack__inner">
+									<div class="sFeedBack__img-cont">
+										<div class="sFeedBack__img"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-1.jpg" alt=""/>
+											<div class="sFeedBack__white-line d-none d-md-block">
+											</div>
+										</div>
+									</div>
+									<div class="sFeedBack__txt">
+										<p>
+											Очень понравились секции и доклады! Хотелось бы, чтобы в одном потоке были пять разных направлений, чтобы потом не плакать, что пропустил очно смежный доклад. Хотя можно просто разорваться)))
+											<br class="d-none d-xl-block"/>В следующий раз десантируемся человеками побольше, чтобы все интересное сразу узнать!2
+										</p>
+										<div class="sFeedBack__name">Яковенко Наталья2
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="sFeedBack__inner">
+									<div class="sFeedBack__img-cont">
+										<div class="sFeedBack__img"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-1.jpg" alt=""/>
+											<div class="sFeedBack__white-line d-none d-md-block">
+											</div>
+										</div>
+									</div>
+									<div class="sFeedBack__txt">
+										<p>
+											Очень понравились секции и доклады! Хотелось бы, чтобы в одном потоке были пять разных направлений, чтобы потом не плакать, что пропустил очно смежный доклад. Хотя можно просто разорваться)))
+											<br class="d-none d-xl-block"/>В следующий раз десантируемся человеками побольше, чтобы все интересное сразу узнать!3
+										</p>
+										<div class="sFeedBack__name">Яковенко Наталья3
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sFeedBack__controll">
+							<div class="feedback-prev feedback-prev--js">
+								<svg class="icon icon-chevron-left ">
+									<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+								</svg>
+							</div>
+							<div class="feedback-fract feedback-fract--js">
+							</div>
+							<div class="feedback-next feedback-next--js">
+								<svg class="icon icon-chevron-right ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sFeedBack-->
+		<!-- start sSpeakers-->
+		<section class="sSpeakers section" id="sSpeakers">
+			<div class="sSpeakers__container container">
+				<!-- picture-->
+				<picture class="sSpeakers__bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/speakers-bg.webp"/>
+					<source type="image/webp" srcset="img/@1x/webp/speakers-bg.webp"/>
+					<source type="image/jpg" srcset="img/@2x/speakers-bg.jpg"/>
+					<source type="image/jpg" srcset="img/@1x/speakers-bg.jpg"/><img src="img/@2x/speakers-bg.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+				<div class="section-title">
+					<h2><span class="text-xl text-danger">На спике</span><span class="text-md">Выступали</span></h2>
+				</div>
+				<div class="sSpeakers__row row">
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-1.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-1.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-1.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-1.jpg"/><img src="img/@2x/speaker-1.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Максим Ильяхов
+							</div>
+							<div class="sSpeakers__company">Главред
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-2.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-2.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-2.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-2.jpg"/><img src="img/@2x/speaker-2.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Елена Першина
+							</div>
+							<div class="sSpeakers__company">Яндекс
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-3.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-3.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-3.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-3.jpg"/><img src="img/@2x/speaker-3.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Дмитрий Колодин
+							</div>
+							<div class="sSpeakers__company">SMM Pornhub
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-4.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-4.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-4.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-4.jpg"/><img src="img/@2x/speaker-4.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Дамир Халилов
+							</div>
+							<div class="sSpeakers__company">основатель GreenPR
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-5.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-5.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-5.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-5.jpg"/><img src="img/@2x/speaker-5.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Тимофей Шиколенков
+							</div>
+							<div class="sSpeakers__company">Предприниматель
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-6.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-6.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-6.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-6.jpg"/><img src="img/@2x/speaker-6.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Залина Маршенкулова
+							</div>
+							<div class="sSpeakers__company">исполнительный директор Мамихлапинатана
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-7.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-7.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-7.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-7.jpg"/><img src="img/@2x/speaker-7.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Алексей Никушин
+							</div>
+							<div class="sSpeakers__company">автор канала<br/>Интернет-аналитика
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-8.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-8.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-8.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-8.jpg"/><img src="img/@2x/speaker-8.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Роман Кумар Виас
+							</div>
+							<div class="sSpeakers__company">Основатель Qmarketing и Qlean
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-9.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-9.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-9.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-9.jpg"/><img src="img/@2x/speaker-9.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Артём Крашенинников
+							</div>
+							<div class="sSpeakers__company">генеральный директор Пикчер
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-10.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-10.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-10.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-10.jpg"/><img src="img/@2x/speaker-10.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Никита Михеенков
+							</div>
+							<div class="sSpeakers__company">директор по развитию Nimax Digital&#160;Agency
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-11.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-11.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-11.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-11.jpg"/><img src="img/@2x/speaker-11.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Феликс Зинатуллин
+							</div>
+							<div class="sSpeakers__company">основатель Церебро Таргет
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3 sSpeakers__col sSpeakers__col--m-alt">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-12.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-12.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-12.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-12.jpg"/><img src="img/@2x/speaker-12.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Илья Сидоров
+							</div>
+							<div class="sSpeakers__company">Mobile Activation Lead Google
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-13.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-13.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-13.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-13.jpg"/><img src="img/@2x/speaker-13.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Светлана Демина
+							</div>
+							<div class="sSpeakers__company">основательница Zigmund Smile
+							</div>
+						</div>
+					</div>
+					<div class="sSpeakers__col col-sm-6 col-md-4 col-lg-3">
+						<div class="sSpeakers__item">
+							<!-- picture-->
+							<picture class="sSpeakers__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/speaker-14.webp"/>
+								<source type="image/webp" srcset="img/@1x/webp/speaker-14.webp"/>
+								<source type="image/jpg" srcset="img/@2x/speaker-14.jpg"/>
+								<source type="image/jpg" srcset="img/@1x/speaker-14.jpg"/><img src="img/@2x/speaker-14.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="sSpeakers__name">Кирилл Воробьев
+							</div>
+							<div class="sSpeakers__company">Head of Sales Viber
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sSpeakers-->
+		<!-- start sExponation-->
+		<section class="sExponation section" id="sExponation">
+			<div class="container">
+				<div class="section-title">
+					<h2>Выставка</h2>
+				</div>
+			</div>
+			<div class="sExponation__black">
+				<div class="sExponation__black-cont container">
+					<!-- picture-->
+					<picture class="sExponation__img"> 
+						<source type="image/webp" srcset="img/@2x/webp/exponation-img.webp"/>
+						<source type="image/webp" srcset="img/@1x/webp/exponation-img.webp"/>
+						<source type="image/png" srcset="img/@2x/exponation-img.png"/>
+						<source type="image/png" srcset="img/@1x/exponation-img.png"/><img src="img/@2x/exponation-img.png" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+					<div class="sExponation__txt-bl">
+						<p>Оба дня на конференции будет работать выставка ведущих IT-сервисов и услуг для бизнеса, на которой участники смогут получить консультации, задать интересующие вопросы и узнать о новейших продуктах компаний полезных для развития бизнеса.</p>
+						<p>По традиции экспоненты дарят посетителям стендов приятные и вкусные сувениры, а также разыграют ценные призы: гаджеты, книги, сертификаты и многое другое.</p><a class="sExponation__btn" href="#">ХОЧУ СТАТЬ ПАРТНЕРОМ</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sExponation-->
+		<!-- start sAfterParty-->
+		<div class="sAfterParty section" id="sAfterParty">
+			<div class="container">
+				<div class="row">
+					<div class="sAfterParty__txt-col col-8 col-sm-5 col-md-4 col-xl-3">
+						<p>В первый день конференции пройдет традиционный кутеж. Именно на афтепати случаются самые приятные знакомства, начинается продуктивное и продолжительное сотрудничество</p>
+					</div>
+					<div class="sAfterParty__img-col col-sm-7 col-md-8 col-xl-9">
+						<!-- picture-->
+						<picture class="sAfterParty__img"> 
+							<source type="image/webp" srcset="img/@2x/webp/after-party.webp"/>
+							<source type="image/webp" srcset="img/@1x/webp/after-party.webp"/>
+							<source type="image/png" srcset="img/@2x/after-party.png"/>
+							<source type="image/png" srcset="img/@1x/after-party.png"/><img src="img/@2x/after-party.png" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
+					</div>
+				</div>
 			</div>
 		</div>
-		<!-- end headerBlock-->
+		<!-- end sAfterParty-->
 		<!-- start sForm-->
 		<section class="sForm section" id="sForm">
 			<div class="container">
@@ -114,16 +682,6 @@
 			</div>
 		</section>
 		<!-- end sForm-->
-		<!-- start sContact-->
-		<section class="sContact section" id="sContact">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>sContact</h2>
-				</div>
-				<div class="row"></div>
-			</div>
-		</section>
-		<!-- end sContact-->
 		<footer class="footer block-with-lazy">
 			<div class="container">
 				<h2>footer</h2>

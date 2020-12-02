@@ -1,0 +1,26 @@
+mixin sRepresent(data)
+	// start sRepresent
+	+b.SECTION.sRepresent.section#sRepresent&attributes(attributes)
+		.container
+			+e.row.row
+				+e.img-col.col-md-5.col-xl-6
+					+e.img
+						+img('img/@2x/represent-img.jpg')
+						+e.shape
+						+e.brick
+				+e.txt-col.col-md-6.col-xl-6.offset-md-1.offset-xl-0
+					+b.section-title
+						h2 Санкт-Петербургская интернет-конференция
+						+e.speak СПИК –
+						+e.big
+							span самое ожидаемое&nbsp;
+							|
+							span.text-danger IT-событие
+							br
+							span Северо-Запада.
+						p
+							| Кто хоть раз был на СПИКе, знает – это событие нельзя пропустить.
+							|
+							br.d-none.d-xl-block
+							| Ведь это самая масштабная конференция в сфере интернет-маркетинга и&nbsp;смежных отраслей в Северо-Западе.
+	// end sRepresent

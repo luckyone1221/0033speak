@@ -1,0 +1,30 @@
+mixin sProgram(data)
+  // start sProgram
+  +b.SECTION.sProgram.section#sProgram&attributes(attributes)
+    .container
+      +b.section-title
+        h2
+          span.text-danger.text-xl Программа
+          span.text-md СПИК 2021
+        p Тематические секции собирают ключевые личности рунета, топовые эксперты с уникальным опытом и знаниями. Программа формируется с учетом трендов 2021 года, опыта прошлых лет и перспектив развития рынка.
+      +e.row.row
+        +e.img-col.col-md-6
+          +pic('programm-bg.jpg')(class="sProgram__img")
+        +e.content-col.col-md-6
+          +e.content
+            +e.title
+              | Что
+              br
+              | обсудим:
+            ul
+              li Контекстная и таргетированная реклама
+              li SEO и мобильные технологии
+              li SMM, контент-маркетинг и email-маркетинг
+              li Ecommerce, B2B и выход на зарубежные рынки
+              li Дизайн и юзабилити
+              li IT-образование и менеджмент в сфере маркетинга
+              li Веб-аналитика
+              li Видеомаркетинг
+              li PR и журналистика
+          +e.btn(href="#") ХОЧУ ВЫСТУПИТЬ
+  // end sProgram

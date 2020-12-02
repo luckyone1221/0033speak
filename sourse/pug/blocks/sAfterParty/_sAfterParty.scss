@@ -1,0 +1,69 @@
+// start .sAfterParty
+.sAfterParty {
+	--sTPB: 0;
+
+	--sPT: #{rem(65)};
+	--sTB: #{rem(65)};
+	@include media-breakpoint-up(md){
+		--sPB: #{rem(117px)};
+		--sPT: #{rem(104)};
+	}
+
+	position: relative;
+	z-index: 1;
+	&:before{
+		content: '';
+		position: absolute;
+		z-index: -1;
+		height: 100%;
+		width: 30%;
+		@include media-breakpoint-up(sm){
+			width: (552/1440) * 100%;
+		}
+		right: 0;
+		top: 0;
+		background-color: $red;
+	}
+
+	&__txt-col{
+		margin-bottom: rem(35);
+		@include media-breakpoint-up(sm){
+			margin-bottom: 0;
+		}
+		p{
+			@include media-breakpoint-up(xl){
+				max-width: 90%;
+			}
+		}
+	}
+	&__img-col{
+		position: relative;
+		z-index: 2;
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: 2;
+			left: rem(-12px);
+			top: rem(-15px);
+			height: 128.5%;
+			width: 40%;
+
+			clip-path: polygon(0 56%,100% 0,100% 44%,0 100%);
+			background: $red;
+		}
+
+		@include media-breakpoint-up(xl){
+			padding-right: 3px;
+		}
+	}
+	&__img{
+		position: relative;
+		z-index: 3;
+		img{
+
+		}
+	}
+	//
+	&__{}
+	&__{}
+} // end.sAfterParty

@@ -1,0 +1,26 @@
+mixin sWho(data)
+  // start sWho
+  +b.SECTION.sWho.section#sWho&attributes(attributes)
+    .container
+      +e.row.row
+        +e.title-col.col-md-6
+          +e.bg-cont
+            +e.bg
+              +e.black
+              +pic('who-img.jpg')(class="sWho__portrait")
+          +b.section-title
+            h2
+              span.text-xl.text-danger Кому
+              span.text-md нужно
+              span.text-md здесь
+              span.text-md быть
+        +e.contnent-col.col-md-6
+          ul
+            li.sm-line Маркетологи и PR-специалисты
+            li Сотрудники IT-компаний и диджитал-стартапов
+            li Владельцы, директора и топ-менеджеры компаний
+            li.sm-line Копирайтеры и журналисты
+            li Специалисты по инфокоммуникациям и интернет-технологиям
+            li Представители государственных структур и учебных заведений
+            li.sm-line Лидеры интернет-бизнеса
+  // end sWho

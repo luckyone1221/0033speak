@@ -1,8 +1,16 @@
 extends layout/main.pug
 
-
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sRepresent/_sRepresent.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sWho/_sWho.pug
+include ../blocks/sProgram/_sProgram.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sExponation/_sExponation.pug
+include ../blocks/sAfterParty/_sAfterParty.pug
+include ../blocks/sTTickets/_sTTickets.pug
 
 block variables
 	- let  mainPage= null
@@ -10,15 +18,16 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-
 	+mob-mnu()
 	+header()
-	+top-nav()
-	+topLine() 
-	+headerBlock()
+	+sRepresent()
+	+sDigits()
+	+sWho()
+	+sProgram()
+	+sFeedBack()
+	+sSpeakers()
+	+sExponation()
+	+sAfterParty()
 	+sForm()
-	+sContact()
+	//-+sContact()
 	+footer()
-
-
-	

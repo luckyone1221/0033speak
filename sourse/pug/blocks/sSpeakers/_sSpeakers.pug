@@ -1,0 +1,40 @@
+mixin sSpeakers(data)
+	// start sSpeakers
+	+b.SECTION.sSpeakers.section#sSpeakers&attributes(attributes)
+		+e.container.container
+			+pic('speakers-bg')(class='sSpeakers__bg')
+			+b.section-title
+				h2
+					span.text-xl.text-danger На спике
+					span.text-md Выступали
+			+e.row.row
+				+speakerItem(1, 'Максим Ильяхов', 'Главред')
+				+speakerItem(2, 'Елена Першина', 'Яндекс')
+				+speakerItem(3, 'Дмитрий Колодин', 'SMM Pornhub')
+				+speakerItem(4, 'Дамир Халилов', 'основатель GreenPR')
+				+speakerItem(5, 'Тимофей Шиколенков', 'Предприниматель')
+				+speakerItem(6, 'Залина Маршенкулова', 'исполнительный директор Мамихлапинатана')
+				+speakerItem(7, 'Алексей Никушин', 'автор канала Интернет-аналитика')
+					| автор канала
+					br
+					| Интернет-аналитика
+				+speakerItem(8, 'Роман Кумар Виас', 'Основатель Qmarketing и Qlean')
+				+speakerItem(9, 'Артём Крашенинников', 'генеральный директор Пикчер')
+				+speakerItem(10, 'Никита Михеенков', 'директор по развитию Nimax Digital Agency')
+					| директор по развитию Nimax Digital&#160;Agency
+				+speakerItem(11, 'Феликс Зинатуллин', 'основатель Церебро Таргет')
+				+speakerItem(12, 'Илья Сидоров', 'Mobile Activation Lead Google')(class="sSpeakers__col--m-alt")
+				+speakerItem(13, 'Светлана Демина', 'основательница Zigmund Smile')
+				+speakerItem(14, 'Кирилл Воробьев', 'Head of Sales Viber')
+	// end sSpeakers
+
+mixin speakerItem(imgNum, name, company)
+	+e.col.col-sm-6.col-md-4.col-lg-3&attributes(attributes)
+		+e.item
+			+pic(`speaker-${imgNum}.jpg`)(class="sSpeakers__img")
+			+e.name=name
+			if block
+				+e.company
+					block
+			else
+				+e.company=company

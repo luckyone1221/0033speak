@@ -1,0 +1,154 @@
+// start .sSpeakers
+.sSpeakers {
+	--sPB: #{10px};
+
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(61px)};
+		--sTPB: #{rem(74)};
+	}
+
+
+	&__container{
+		@include media-breakpoint-up(xl){
+			padding-right: 19px;
+		}
+	}
+	position: relative;
+	z-index: 1;
+	&__bg{
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		display: block;
+
+		height: rem(380);
+		@include media-breakpoint-up(xl){
+			height: rem(455);
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+	}
+	.section-title{
+		color: $white;
+		@include media-breakpoint-up(xl){
+			margin-left: -7px;
+		}
+		h2{
+			span{
+				display: block;
+				text-transform: uppercase;
+				line-height: 1;
+				font-weight: 900;
+
+				&.text-xl{
+					font-size: calc(33px + 5vw);
+					@include media-breakpoint-up(sm){
+						font-size: rem(93);
+					}
+					@include media-breakpoint-up(md){
+						font-size: rem(120);
+					}
+				}
+				&.text-md{
+					font-size: rem(34);
+					@include media-breakpoint-up(sm){
+						font-size: rem(40);
+					}
+					@include media-breakpoint-up(md){
+						font-size: rem(54);
+					}
+				}
+
+			}
+		}
+	}
+	&__row{
+		@include media-breakpoint-up(xl){
+			@include roww(40px);
+		}
+
+		justify-content: center;
+	}
+	&__col{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(25);
+			min-height: rem(406px);
+		}
+
+		&--m-alt{
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(35);
+			}
+		}
+		
+		@media (min-width: 374px) and (max-width: 576px) {
+			width: 50%;
+		}
+	}
+	&__item{
+
+	}
+	&__img{
+		@extend .accept-ratio-frame-nh;
+		background-color: transparent;
+		overflow: visible;
+		padding-top: (300/248) * 100%;
+		margin-bottom: rem(24);
+
+		&:before{
+			content: '';
+			position: absolute;
+			bottom: rem(-15px);
+			left: rem(9px);
+			z-index: 2;
+			width: rem(9px);
+			height: rem(88px);
+			background-color: $red;
+		}
+
+	}
+	&__name{
+		font-weight: bold;
+
+		font-size: rem(15);
+		@include media-breakpoint-up(sm){
+			font-size: rem(16);
+		}
+		line-height: (21/16);
+		text-transform: uppercase;
+
+		margin-bottom: rem(6);
+	}
+	&__company{
+		font-weight: bold;
+		font-size: rem(12px);
+		line-height: (15/12);
+		text-transform: uppercase;
+
+		display: flex;
+		flex-direction: column;
+
+		&:after{
+			content: '';
+			width: 9px;
+			height: 16px;
+			background-color: $red;
+			margin-left: rem(9);
+			margin-top: rem(10);
+		}
+	}
+	//
+	&__{}
+} // end.sSpeakers

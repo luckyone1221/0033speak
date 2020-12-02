@@ -1,0 +1,35 @@
+mixin sDigits(data)
+	// start sDigits
+	+b.SECTION.sDigits.section#sDigits&attributes(attributes)
+		+pic('digits-bg-lg.png')(class="sDigits__bg-lg d-none d-lg-block")
+		.container
+			.row
+				+e.title-col.col-lg-6
+					+b.section-title
+						h2
+							span.text-danger СПИК
+							span в цифрах
+				+pic('digits-bg-sm.jpg')(class="sDigits__bg-sm d-lg-none")
+				+e.digits-col.col-lg-6
+					+e.red-cont
+						+digitItem('14')
+							| успешных ежегодных конференций
+						+digitItem('3000')
+							| участников – ваших коллег, потенциальных клиентов и партнеров
+						+digitItem('2')
+							| дня обмена опытом и знаниями
+						+digitItem('5')
+							| потоков
+							br
+							| выступлений
+						+digitItem('20')
+							| часов общения и знакомств
+						+digitItem('250')
+							| спикеров
+	// end sDigits
+
+mixin digitItem(digit)
+	+e.item
+		+e.digit=digit
+		+e.descr
+			block
