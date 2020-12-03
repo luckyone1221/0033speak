@@ -1,9 +1,22 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			+e.row.row
+				+e.title-col.col-lg-5.col-xl-6
+					+b.section-title
+						h4 КОНТАКТЫ ОРГКОМИТЕТА
+						a(href='tel:+74959505651') +7 (495) 950-5651
+				+e.list-col.col-lg-7.col-xl-6
+					+contactItem('Общие вопросы, регистрация и получение промо-кодов:', 'reg@sp-ic.ru')
+					+contactItem('По вопросам аккредитации и инфопартнерства:', 'pr@sp-ic.ru')
+					+contactItem('Обсуждение партнерских отношений:', 'partner@sp-ic.ru')
+					+contactItem('Вопросы по оплате участия:', 'fin@sp-ic.ru')
+					+contactItem('Вопросы по участию в качестве спикера:', 'prog@sp-ic.ru')
+					//reg@sp-ic.ru
 	// end sContact
+
+mixin contactItem(nameTxt, mail)
+	+e.item(href=`mailto:${mail}`)
+		+e.name=nameTxt
+		+e.mail=mail

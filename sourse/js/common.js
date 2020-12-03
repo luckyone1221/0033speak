@@ -333,6 +333,49 @@ function eventHandler() {
 		},
 
 	});
+	//partners
+	$('.sPartners__slider--js').each(function (){
+		let partnersSlider = new Swiper ($(this).find('.partner-slider-js'), {
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			//loop: true,
+
+			//lazy
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 5,
+			},
+
+			//pagination
+			pagination: {
+				el: $(this).find('.partner-pugin--js'),
+				type: 'bullets',
+				clickable: true,
+			},
+
+		});
+	});
+
+	//currYear
+	$('.curr-year-js').each(function (){
+		this.innerHTML = new Date().getFullYear();
+	})
+
+	//scrolltop js
+	$('.scroll-top-js').click(function (){
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+	})
+
+	//footer
+	let footerSlider = new Swiper('.footer-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 27,
+	});
+
+
 
 	//end luckyoneJs
 };

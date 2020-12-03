@@ -1,0 +1,133 @@
+// start .sPartners
+.sPartners {
+	overflow: hidden;
+	--sPT: #{rem(30px)};
+	--sPB: #{rem(20px)};
+	--sTPB: #{rem(35px)};
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(18)};
+		--sPB: #{rem(51)};
+		--sTPB: #{rem(94px)};
+	}
+
+	.container{
+		@include media-breakpoint-up(xl){
+			padding-left: 9px;
+		}
+	}
+
+	.section-title{
+		@include media-breakpoint-up(xl){
+			//margin-left: -6px;
+		}
+
+		h2{
+			font-weight: 900;
+			line-height: 1;
+			text-transform: uppercase;
+
+			font-size: calc(27px + 4vw);
+			@include media-breakpoint-up(sm){
+				font-size: rem(65);
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(90);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: rem(120);
+			}
+		}
+	}
+
+
+	&__slider{
+		margin-bottom: rem(65);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(100);
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		.swiper-container{
+			@include media-breakpoint-down(md){
+				overflow: visible;
+			}
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			width: rem(200);
+			@include media-breakpoint-up(md){
+				width: calc((100% / 3) - (20px * 2 / 3));
+			}
+			@include media-breakpoint-up(lg){
+				width: calc((100% / 4) - (20px * 3 / 4));
+			}
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: auto;
+			//background: pink;
+
+			img{
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		//pugin
+		.partner-pugin{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			padding: rem(20);
+			.swiper-pagination-bullet{
+				background: $body-color;
+				opacity: 1;
+				width: 10px;
+				height: 10px;
+				margin: 0 rem(5);
+
+				&-active{
+					background: $red;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		//
+		&--common{
+			.sPartners__title{
+				margin-bottom: rem(28px);
+				@include media-breakpoint-up(lg){
+					margin-bottom: rem(28px);
+				}
+			}
+		}
+	}
+	&__title{
+		margin-bottom: rem(50px);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(67px);
+		}
+		font-weight: 900;
+		font-size: rem(24px);
+		line-height: 1;
+
+		text-transform: uppercase;
+		color: $red;
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sPartners

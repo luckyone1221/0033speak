@@ -11,6 +11,12 @@ include ../blocks/sSpeakers/_sSpeakers.pug
 include ../blocks/sExponation/_sExponation.pug
 include ../blocks/sAfterParty/_sAfterParty.pug
 include ../blocks/sTTickets/_sTTickets.pug
+include ../blocks/sFlashBack/_sFlashBack.pug
+include ../blocks/sPlace/_sPlace.pug
+
+include ../blocks/sOrganiztors/_sOrganiztors.pug
+include ../blocks/sPartners/_sPartners.pug
+
 
 block variables
 	- let  mainPage= null
@@ -28,6 +34,10 @@ block pagecontent
 	+sSpeakers()
 	+sExponation()
 	+sAfterParty()
-	+sForm()
-	//-+sContact()
+	+sTTickets()
+	+sFlashBack()
+	+sPlace()
+	+sContact()
+	+sOrganiztors()
+	+sPartners()
 	+footer()

@@ -1,0 +1,27 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Партнеры
+			+partnersSlider('Специальные партнеры')
+				- for (var i = 1; i <= 1; i++)
+					+partnersSlide(i, 'spec-')
+			+partnersSlider('Партнеры')(class="sPartners__slider--common")
+				- for (var i = 1; i <= 4; i++)
+					+partnersSlide(i)
+	// end sPartners
+
+mixin partnersSlider(title, showpugin)
+	+e.slider--js&attributes(attributes)
+		+e.title=title
+		.swiper-container.partner-slider-js
+			.swiper-wrapper
+				block
+			if showpugin
+				+b.partner-pugin--js.d-lg-none
+
+mixin partnersSlide(imgNum, mod='')
+	.swiper-slide
+		img.swiper-lazy(src='#' data-src=`img/@2x/${mod}partner-${imgNum}.png` alt="")
+		//-img( src=`img/@2x/${mod}partner-${imgNum}.png` alt="")

@@ -434,7 +434,7 @@ iframe {
 	height: 0;
 	position: relative;
 
-	background-color: $black;
+	//background-color: $black;
 	overflow: hidden;
 
 	img{
@@ -458,4 +458,8 @@ iframe {
 
 	font-weight: bold;
 	text-transform: uppercase;
+}
+
+a{
+	text-decoration: none!important;
 }

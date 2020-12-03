@@ -1,4 +1,50 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.scroll-top.d-none.d-md-flex
+				+e.scroll-btn.scroll-top-js
+					+icon('arrow-top')
+			+e.row.row
+				+e.logo-col.col-7.col-sm-4.col-md-3.col-lg-4
+					+e.logo(href="/")
+						+img('img/svg/footer-logo-2.svg')
+				+e.input-col.col-12.col-sm-6.col-lg-4
+					+form-wrap()
+						+e.input-cont
+							+input('Введите Ваш e-mail', 'email', 'Подписаться на рассылку')
+							+e.BUTTON.send-btn(type='submit')
+								+icon('chevron-right-bold')
+				+e.soc-col.col-5.col-sm-2.col-md-3.col-lg-4
+					+e.soc-item(href="#")
+						+icon('vk')
+					+e.soc-item(href="#")
+						+icon('facebook')
+			+e.slider-cont
+				+e.title СПИК прошлых лет:
+				+e.slider
+					.swiper-container.footer-slider-js
+						.swiper-wrapper
+							+footerSlide('2006')
+							+footerSlide('2007')
+							+footerSlide('2008')
+							+footerSlide('2009')
+							+footerSlide('2010')
+							+footerSlide('2011')
+							+footerSlide('2012')
+							+footerSlide('2013')
+							+footerSlide('2014')
+							+footerSlide('2015')
+							+footerSlide('2016')
+							+footerSlide('2017')
+							+footerSlide('2018')
+							+footerSlide('2019')
+							+footerSlide('2020')
+			+e.bot
+				+e.all-rights
+					span © Спик 2006-
+					span.curr-year-js 2021
+				+e.policy(href="#") Политика конфиденциальности
+
+mixin footerSlide(year, Lhref='#')
+	.swiper-slide
+		a(href=Lhref)=year

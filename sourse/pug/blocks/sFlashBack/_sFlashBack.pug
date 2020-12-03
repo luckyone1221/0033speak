@@ -1,0 +1,27 @@
+mixin sFlashBack(data)
+	// start sFlashBack
+	+b.SECTION.sFlashBack.section#sFlashBack&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+e.video-col.col-lg-8
+					+b.section-title
+						h2
+							span.text-xl СПИК
+							span.text-md КАК это было
+					+e.video(href='https://www.youtube.com/watch?v=cZYkSc5JG7o&list=PLBSdPE852lAQg1SbOcDOoUfOVrWWDZWqU&index=311&ab_channel=Monstercat%3AUncaged' data-fancybox="video")
+						+img('img/@2x/videoBg.jpg')
+							//play-btn
+			+e.row--bot.row
+				+e.left-col.col-lg-8
+					+e.l-box
+						+pic('lb-img-1.jpg')(class="sFlashBack__lb-item")
+						+pic('lb-img-2.jpg')(class="sFlashBack__lb-item")
+						+pic('lb-img-3.jpg')(class="sFlashBack__lb-item")
+				+e.right-col.col-lg-4
+					+e.r-box
+						+pic('rb-img-1.jpg')(class="sFlashBack__rb-item")
+						+pic('rb-img-2.jpg')(class="sFlashBack__rb-item")
+						+pic('rb-img-3.jpg')(class="sFlashBack__rb-item")
+						+pic('rb-img-4.jpg')(class="sFlashBack__rb-item")
+						+pic('rb-img-5.jpg')(class="sFlashBack__rb-item")
+	// end sFlashBack

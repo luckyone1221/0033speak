@@ -2,8 +2,87 @@ mixin sTTickets(data)
 	// start sTTickets
 	+b.SECTION.sTTickets.section#sTTickets&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sTTickets
-				
+			+b.section-title
+				h2 БИЛЕТЫ
 			.row
+				+e.discount-col.col-md-4
+					+e.corp-disc
+						b Корпоративные скидки
+						.text-sm считается автоматически при добавлении в корзину
+						ul
+							li
+								span от 3 билетов -
+								|
+								span.text-danger 15%
+							li
+								span от 5 билетов -
+								|
+								span.text-danger 20%
+							li
+								span от 7 билетов -
+								|
+								span.text-danger 25%
+					+e.another-disc
+						b Другие скидки
+						.text-sm
+							| не суммируются с корпоративными, для получения
+							| скидки пишите на reg@sp-ic.ru.
+					+e.permanent
+						b.text-md Постоянные участники СПИК
+						p.text-md
+							| Если вы участвовали в СПИК 3
+							|
+							br
+							| и более раз –
+							|
+							span.text-danger 15%.
+					+e.personal
+						b.text-md Индивидуальные предприниматели
+						p.text-md
+							| При предоставлении скана/фото свидетельства о регистрации ИП –
+							|
+							span.text-danger 10%.
+					+e.students
+						b.text-md Студенты очной формы обучения, пенсионеры и представители госсектора
+						p.text-md
+							| При предоставлении скана/фото документов, подтверждающих статус, –
+							|
+							span.text-danger 80%.
+				+e.price-col.col-md-8
+					+e.status
+						+e.name-col
+						+e.item-col.text-danger.s-item участник
+						+e.item-col.s-item
+							| Билет
+							br.d-none.d-md-block
+							| на Кутеж
+					+e.table
+						+e.border-lined
+							+ticketsItem('Участие во всех потоках программы')
+							+ticketsItem('Посещение выставки в холле')
+							+ticketsItem('Презентации докладов')
+							+ticketsItem('Подкасты выступлений', '-', '+')
+							+ticketsItem('Материалы Paperless', '-', '+')
+						+e.line-row--price
+							+e.name-col
+								span Цена&nbsp;
+								span.text-danger сейчас
+							+e.item-col--price.text-danger 4 500 ₽
+							+e.item-col--price.text-danger 3 000 ₽
+						+e.line-row--price
+							+e.name-col Цена с 23.01.21
+							+e.item-col--price 9 500 ₽
+							+e.item-col--price 3 000 ₽
+						+e.line-row--btns
+							+e.name-col
+							+e.item-col
+								+e.btn(href="https://runet-id.com/event/spic21/" target='_blank') Купить
+							+e.item-col
+								+e.btn(href="https://runet-id.com/event/spic21/" target='_blank') Купить
 	// end sTTickets
+
+mixin ticketsItem(name, partVal='+', noPartVal='-')
+	+e.line-row&attributes(attributes)
+		+e.name-col=name
+		+e.item-col.text-danger=partVal
+		+e.item-col=noPartVal

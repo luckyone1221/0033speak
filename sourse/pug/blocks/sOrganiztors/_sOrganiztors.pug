@@ -1,0 +1,20 @@
+mixin sOrganiztors(data)
+	// start sOrganiztors
+	+b.SECTION.sOrganiztors.section#sOrganiztors&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Организаторы
+			+orgItem('img/svg/org-logo-1.svg')
+				p TRINET.Web Facultet — компания полного цикла, работает на рынке IT-технологий с 2000 г. и является одной из лидирующих компаний Северо-Запада в области продвижения интернет-проектов, разработки и сопровождения.
+				a(href='www.trinet.ru') www.trinet.ru
+			+orgItem('img/@2x/org-logo-2.png')
+				p РАЭК (Российская Ассоциация электронных коммуникаций) — некоммерческая организация, созданная в 2006 году для консолидации и отстаивания интересов российской интернет-отрасли. Сегодня РАЭК объединяет всех крупных игроков Рунета.
+				a(href='www.raec.ru') www.raec.ru
+	// end sOrganiztors
+
+mixin orgItem(imgPass)
+	+e.item
+		+e.img-bl
+			+img(imgPass)
+		+e.txt-block
+			block

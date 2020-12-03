@@ -1,0 +1,29 @@
+mixin sPlace(data)
+	// start sPlace
+	+b.SECTION.sPlace.section#sPlace&attributes(attributes)
+		.container
+			+e.row.row
+				+e.title-col.col-md-7
+					+b.section-title
+						h2
+							span.text-danger.text-xl МЕСТО
+							span.text-md конференции
+						p.d-md-none
+							span г. Санкт-Петербург,
+							span ул. Кораблестроителей,
+							span д. 14, гостиница
+							span «Прибалтийская Park Inn»,
+							span конференц-центр
+				+e.img-col.col-md-5
+					+pic('place-img-jpg.jpg')(class="sPlace__img")
+				+e.descr-col.d-none.d-md-block.col-md-4.col-lg-3
+					p
+						span г. Санкт-Петербург,
+						span ул. Кораблестроителей,
+						span д. 14, гостиница
+						span «Прибалтийская Park Inn»,
+						span конференц-центр
+				+e.map-col.col-md-8.col-lg-9
+					+e.map-inner
+						+img('img/@2x/map-stab.png')
+	// end sPlace
