@@ -29,15 +29,15 @@
 			</div>
 			<div class="menu-mobile__inner"><a class="menu-mobile__logo" href="/"><img src="img/@2x/small-logo.png" alt="СПИК 2021" title="СПИК 2021"/></a>
 				<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О конференции</a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sRepresent" itemprop="url">О конференции</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Программа</a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sProgram" itemprop="url">Программа</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Выставка</a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sExponation" itemprop="url">Выставка</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Билеты</a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sTTickets" itemprop="url">Билеты</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sPlace" itemprop="url">Контакты</a>
 					</li>
 				</ul>
 				<div class="text-right"></div>
@@ -58,19 +58,19 @@
 				<div class="header__top-line"><a class="header__logo" href="/"><img src="img/@2x/small-logo.png" alt="СПИК 2021" title="СПИК 2021"/></a>
 					<div class="header__menu-cont">
 						<ul class="navMenu d-lg-flex d-none" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О конференции</a>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sRepresent" itemprop="url">О конференции</a>
 							</li>
-							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Программа</a>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sProgram" itemprop="url">Программа</a>
 							</li>
-							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Выставка</a>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sExponation" itemprop="url">Выставка</a>
 							</li>
-							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Билеты</a>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sTTickets" itemprop="url">Билеты</a>
 							</li>
-							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sPlace" itemprop="url">Контакты</a>
 							</li>
 						</ul>
 						<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-						</div><a class="header__user-btn" href="#">
+						</div><a class="header__user-btn" href="https://runet-id.com/" target="_blank">
 						<svg class="icon icon-user ">
 							<use xlink:href="img/svg/sprite.svg#user"></use>
 						</svg></a>
@@ -294,7 +294,7 @@
 								<li>Видеомаркетинг</li>
 								<li>PR и журналистика</li>
 							</ul>
-						</div><a class="sProgram__btn" href="#">ХОЧУ ВЫСТУПИТЬ</a>
+						</div><a class="sProgram__btn" href="mailto:">ХОЧУ ВЫСТУПИТЬ</a>
 					</div>
 				</div>
 			</div>
@@ -645,7 +645,7 @@
 					<!-- /picture-->
 					<div class="sExponation__txt-bl">
 						<p>Оба дня на конференции будет работать выставка ведущих IT-сервисов и услуг для бизнеса, на которой участники смогут получить консультации, задать интересующие вопросы и узнать о новейших продуктах компаний полезных для развития бизнеса.</p>
-						<p>По традиции экспоненты дарят посетителям стендов приятные и вкусные сувениры, а также разыграют ценные призы: гаджеты, книги, сертификаты и многое другое.</p><a class="sExponation__btn" href="#">ХОЧУ СТАТЬ ПАРТНЕРОМ</a>
+						<p>По традиции экспоненты дарят посетителям стендов приятные и вкусные сувениры, а также разыграют ценные призы: гаджеты, книги, сертификаты и многое другое.</p><a class="sExponation__btn" href="mailto:partner@sp-ic.ru">ХОЧУ СТАТЬ ПАРТНЕРОМ</a>
 					</div>
 				</div>
 			</div>
@@ -907,7 +907,8 @@
 						<p><span>г. Санкт-Петербург,</span><span>ул. Кораблестроителей,</span><span>д. 14, гостиница</span><span>«Прибалтийская Park Inn»,</span><span>конференц-центр</span></p>
 					</div>
 					<div class="sPlace__map-col col-md-8 col-lg-9">
-						<div class="sPlace__map-inner"><img src="img/@2x/map-stab.png" alt="" loading="lazy"/>
+						<div class="sPlace__map-inner">
+							<div id="map"></div>
 						</div>
 					</div>
 				</div>
@@ -1013,10 +1014,10 @@
 							</form>
 						</div>
 					</div>
-					<div class="footer__soc-col col-5 col-sm-2 col-md-3 col-lg-4"><a class="footer__soc-item" href="#">
+					<div class="footer__soc-col col-5 col-sm-2 col-md-3 col-lg-4"><a class="footer__soc-item" href="https://vk.com/spicspb" target="_blank">
 						<svg class="icon icon-vk ">
 							<use xlink:href="img/svg/sprite.svg#vk"></use>
-						</svg></a><a class="footer__soc-item" href="#">
+						</svg></a><a class="footer__soc-item" href="https://www.facebook.com/spicspb" target="_blank">
 						<svg class="icon icon-facebook ">
 							<use xlink:href="img/svg/sprite.svg#facebook"></use>
 						</svg></a>
@@ -1076,6 +1077,12 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-win" id="modal-thanks" style="display: none">
+			<div class="text-center">
+				<h4>Будьте в курсе всех новостей</h4>
+			</div>
+		</div>
+		<!--modal-thanks-->
 		<!-- end modals-->
 		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
@@ -1084,7 +1091,7 @@
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
-		<script src="libs/swiper/js/swiper.min.js"></script>
+		<script src="libs/swiper/js/swiper.min.js"></script><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98" type="text/javascript"></script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>

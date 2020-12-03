@@ -94,6 +94,7 @@
       margin-bottom: rem(12);
     }
     a{
+      transform-origin: center!important;
       font-size: rem(12px);
 
       @include mt();
@@ -101,7 +102,7 @@
 
       color: $red;
       &:hover{
-        transform: scale(1.1);
+        //transform: scale(1.1);
         color: darken($red, 10);
       }
 
