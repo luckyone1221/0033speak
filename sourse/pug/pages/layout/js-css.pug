@@ -5,6 +5,11 @@ mixin allcss()
 	link(href="css/main.min.css", rel="stylesheet")
 
 mixin allcjs()
+	//-fonts
+	link(type="font/woff2" href="fonts/DINPro/DINPro.woff2" rel="preload" as="font" crossorigin="anonymous")
+	link(type="font/woff2" href="fonts/DINPro-Bold/DINPro-Bold.woff2" rel="preload" as="font" crossorigin="anonymous")
+	link(type="font/woff2" href="fonts/DINPro-Black/DINPro-Black.woff2" rel="preload" as="font" crossorigin="anonymous")
+
 	link(href="libs/swiper/css/swiper.min.css", rel="stylesheet")
 	//- link(rel="stylesheet", href="libs/slick-carousel/slick/slick.css")
 	link(href="libs/@fancyapps/fancybox/jquery.fancybox.min.css", rel="stylesheet")

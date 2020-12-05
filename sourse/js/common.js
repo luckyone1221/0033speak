@@ -372,62 +372,75 @@ function eventHandler() {
 	smoothScroll('.ancor-js, .top-nav li a, .scroll-link');
 
 
-	//yandex map js
-	// ymaps.ready(function () {
-	// 	var myMap = new ymaps.Map('map', {
-	// 			center: [59.938600861371185,30.213698854492115],
-	// 			zoom: 16
-	// 		}, {
-	// 			searchControlProvider: 'yandex#search'
-	// 		}),
-	//
-	// 		// Создаём макет содержимого.
-	// 		MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-	// 			'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-	// 		),
-	//
-	// 		myPlacemark = new ymaps.Placemark([59.939338387243374,30.214020719573902], {
-	// 			hintContent: 'Мeсто конференции',
-	// 			balloonContent: '«Прибалтийская Park Inn»'
-	// 		}, {
-	// 			// Опции.
-	// 			// Необходимо указать данный тип макета.
-	// 			iconLayout: 'default#image',
-	// 			// Своё изображение иконки метки.
-	// 			iconImageHref: 'img/@1x/mark-img.png',
-	// 			// Размеры метки.
-	// 			iconImageSize: [74, 90],
-	// 			// Смещение левого верхнего угла иконки относительно
-	// 			// её "ножки" (точки привязки).
-	// 			//iconImageOffset: [-5, -38]
-	// 			iconImageOffset: [-3, -50]
-	// 		}),
-	//
-	// 		myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-	// 			hintContent: 'Собственный значок метки с контентом',
-	// 			balloonContent: 'А эта — новогодняя',
-	// 			iconContent: '12'
-	// 		}, {
-	// 			// Опции.
-	// 			// Необходимо указать данный тип макета.
-	// 			iconLayout: 'default#imageWithContent',
-	// 			// Своё изображение иконки метки.
-	// 			iconImageHref: 'images/ball.png',
-	// 			// Размеры метки.
-	// 			iconImageSize: [48, 48],
-	// 			// Смещение левого верхнего угла иконки относительно
-	// 			// её "ножки" (точки привязки).
-	// 			iconImageOffset: [-24, -24],
-	// 			// Смещение слоя с содержимым относительно слоя с картинкой.
-	// 			iconContentOffset: [15, 15],
-	// 			// Макет содержимого.
-	// 			iconContentLayout: MyIconContentLayout
-	// 		});
-	//
-	// 	myMap.geoObjects
-	// 		.add(myPlacemark)
-	// 		.add(myPlacemarkWithContent);
-	// });
+	//yandex lazy
+	//<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98" type="text/javascript"></script>
+	window.setTimeout(function (){
+		let yandexScript = document.createElement('script');
+		yandexScript.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98');
+		yandexScript.setAttribute('type', 'text/javascript');
+
+		document.body.appendChild(yandexScript);
+		console.log(yandexScript);
+		window.setTimeout(function (){
+			ymaps.ready(function () {
+				var myMap = new ymaps.Map('map', {
+						center: [59.938600861371185,30.213698854492115],
+						zoom: 16
+					}, {
+						searchControlProvider: 'yandex#search'
+					}),
+
+					// Создаём макет содержимого.
+					MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+						'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+					),
+
+					myPlacemark = new ymaps.Placemark([59.939338387243374,30.214020719573902], {
+						hintContent: 'Мeсто конференции',
+						balloonContent: '«Прибалтийская Park Inn»'
+					}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: 'img/@1x/mark-img.png',
+						// Размеры метки.
+						iconImageSize: [74, 90],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						//iconImageOffset: [-5, -38]
+						iconImageOffset: [-3, -50]
+					}),
+
+					myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+						hintContent: 'Собственный значок метки с контентом',
+						balloonContent: 'А эта — новогодняя',
+						iconContent: '12'
+					}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#imageWithContent',
+						// Своё изображение иконки метки.
+						iconImageHref: 'images/ball.png',
+						// Размеры метки.
+						iconImageSize: [48, 48],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						iconImageOffset: [-24, -24],
+						// Смещение слоя с содержимым относительно слоя с картинкой.
+						iconContentOffset: [15, 15],
+						// Макет содержимого.
+						iconContentLayout: MyIconContentLayout
+					});
+
+				myMap.geoObjects
+					.add(myPlacemark)
+					.add(myPlacemarkWithContent);
+			});
+		}, 1000);
+
+	}, 2000);
+
 	//end luckyoneJs
 };
 if (document.readyState !== 'loading') {
