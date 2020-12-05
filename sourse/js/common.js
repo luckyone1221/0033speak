@@ -375,12 +375,12 @@ function eventHandler() {
 		spaceBetween: 27,
 	});
 
-	window.setTimeout(function (){
-		$.fancybox.open({
-			src: '#modal-thanks',
-			type: 'inline'
-		});
-	}, 1000)
+	// window.setTimeout(function (){
+	// 	$.fancybox.open({
+	// 		src: '#modal-thanks',
+	// 		type: 'inline'
+	// 	});
+	// }, 1000)
 
 
 	//yandex map js

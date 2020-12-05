@@ -364,13 +364,13 @@ function eventHandler() {
 	var footerSlider = new Swiper('.footer-slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 27
-	});
-	window.setTimeout(function () {
-		$.fancybox.open({
-			src: '#modal-thanks',
-			type: 'inline'
-		});
-	}, 1000); //yandex map js
+	}); // window.setTimeout(function (){
+	// 	$.fancybox.open({
+	// 		src: '#modal-thanks',
+	// 		type: 'inline'
+	// 	});
+	// }, 1000)
+	//yandex map js
 
 	ymaps.ready(function () {
 		var myMap = new ymaps.Map('map', {
