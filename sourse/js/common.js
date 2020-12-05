@@ -210,17 +210,7 @@ const JSCCommon = {
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}, { passive: true });
 	},
-	animateScroll() {
-		// листалка по стр
-		$(" .top-nav li a, .scroll-link").click(function () {
-			const elementClick = $(this).attr("href");
-			const destination = $(elementClick).offset().top;
 
-			$('html, body').animate({ scrollTop: destination }, 1100);
-
-			return false;
-		});
-	},
 	getCurrentYear(el) {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
@@ -237,7 +227,6 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
@@ -382,6 +371,56 @@ function eventHandler() {
 	// 	});
 	// }, 1000)
 
+	//fix menu
+	$('.menu-mobile .navMenu__link').click(function (){
+		JSCCommon.closeMenu();
+	});
+
+	//vanilla scrollLik
+	function smoothScroll(qSelector){
+		let elements = document.querySelectorAll(qSelector);
+		if (elements.length === 0) return
+
+		for (let elem of elements){
+			console.log(document.body.classList.contains('tarif-page'));
+			elem.addEventListener('click', function () {
+
+				let destinyID = this.getAttribute('href'); //this.attributes.href.nodeValue
+				event.preventDefault();
+
+				let destinyElem = document.querySelector(destinyID);
+				if (!destinyElem) return
+
+				let destinyTop = getCoords(destinyElem).top;
+
+				window.scrollTo({
+					top: destinyTop,
+					behavior: "smooth"
+				});
+
+			});
+		}
+	}
+	function getCoords(elem) { // crossbrowser version
+		var box = elem.getBoundingClientRect();
+
+		var body = document.body;
+		var docEl = document.documentElement;
+
+		var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+		var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+		var clientTop = docEl.clientTop || body.clientTop || 0;
+		var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+		var top  = box.top +  scrollTop - clientTop;
+		var left = box.left + scrollLeft - clientLeft;
+
+		return { top: Math.round(top), left: Math.round(left) };
+	}
+
+	smoothScroll('.ancor-js, .top-nav li a, .scroll-link');
+
 
 	//yandex map js
 	ymaps.ready(function () {
@@ -407,11 +446,11 @@ function eventHandler() {
 				// Своё изображение иконки метки.
 				iconImageHref: 'img/@1x/mark-img.png',
 				// Размеры метки.
-				iconImageSize: [37, 45],
+				iconImageSize: [74, 90],
 				// Смещение левого верхнего угла иконки относительно
 				// её "ножки" (точки привязки).
 				//iconImageOffset: [-5, -38]
-				iconImageOffset: [-3, -10]
+				iconImageOffset: [-3, -50]
 			}),
 
 			myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {

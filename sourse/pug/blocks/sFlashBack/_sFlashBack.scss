@@ -87,6 +87,12 @@
 	}
 	//video
 	&__video{
+		@include media-breakpoint-down(lg){
+			position: relative;
+			left: calc(-1 * (100vw - 100%) / 2);
+			width: 100vw;
+		}
+
 		@extend .accept-ratio-frame-nh;
 		padding-top: (413/736) * 100%;
 		@include media-breakpoint-up(lg){
