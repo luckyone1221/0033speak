@@ -48,7 +48,9 @@
 		clip-path: polygon(0% 0,100% 72%,100% 100%,62% 100%,0% 56%);
 	}
 
-
+	.container{
+		overflow: hidden;
+	}
 	&__scroll-top{
 		display: flex;
 		justify-content: flex-end;
