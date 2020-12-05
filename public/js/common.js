@@ -59,7 +59,7 @@ var JSCCommon = {
 					function setValue(val, elem) {
 						if (elem && val) {
 							var el = modal.querySelector(elem);
-							el.tagName == "INPUT" ? el.value = val : el.innerHTML = val; // console.log(modal.querySelector(elem).tagName)
+							el.tagName === "INPUT" ? el.value = val : el.innerHTML = val; // console.log(modal.querySelector(elem).tagName)
 						}
 					}
 
@@ -127,41 +127,6 @@ var JSCCommon = {
 		}
 	},
 	// /mobileMenu
-	// tabs  .
-	tabscostume: function tabscostume(tab) {
-		var tabs = {
-			Btn: [].slice.call(document.querySelectorAll(".".concat(tab, "__btn"))),
-			BtnParent: [].slice.call(document.querySelectorAll(".".concat(tab, "__caption"))),
-			Content: [].slice.call(document.querySelectorAll(".".concat(tab, "__content")))
-		};
-		tabs.Btn.forEach(function (element, index) {
-			element.addEventListener('click', function () {
-				if (!element.classList.contains('active')) {
-					var siblings = element.parentNode.querySelector(".".concat(tab, "__btn.active"));
-					var siblingsContent = tabs.Content[index].parentNode.querySelector(".".concat(tab, "__content.active"));
-					siblings.classList.remove('active');
-					siblingsContent.classList.remove('active');
-					element.classList.add('active');
-					tabs.Content[index].classList.add('active');
-				}
-			});
-		}); // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
-		// });
-	},
-	// /tabs
-	inputMask: function inputMask() {
-		// mask for input
-		var InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
-		InputTel.forEach(function (element) {
-			element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
-		});
-		Inputmask("+9(999)999-99-99").mask(InputTel);
-	},
-	// /inputMask
 	ifie: function ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
@@ -240,19 +205,15 @@ function eventHandler() {
 
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow(); // JSCCommon.CustomInputFile(); 
-
-	var x = window.location.host;
-	var screenName;
-	screenName = '01.png';
-
-	if (screenName && x === "localhost:3000") {
-		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
-	}
+	// var x = window.location.host;
+	// let screenName;
+	// screenName = '01.png';
+	// if (screenName && x === "localhost:3000") {
+	// 	$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	// }
 
 	function whenResize() {
 		var topH = $("header ").innerHeight();
@@ -358,13 +319,7 @@ function eventHandler() {
 	var footerSlider = new Swiper('.footer-slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 27
-	}); // window.setTimeout(function (){
-	// 	$.fancybox.open({
-	// 		src: '#modal-thanks',
-	// 		type: 'inline'
-	// 	});
-	// }, 1000)
-	//fix menu
+	}); //fix menu
 
 	$('.menu-mobile .navMenu__link').click(function () {
 		JSCCommon.closeMenu();

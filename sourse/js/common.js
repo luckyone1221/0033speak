@@ -46,7 +46,7 @@ const JSCCommon = {
 					function setValue(val, elem) {
 						if (elem && val) {
 							const el = modal.querySelector(elem)
-							el.tagName == "INPUT"
+							el.tagName === "INPUT"
 								? el.value = val
 								: el.innerHTML = val;
 							// console.log(modal.querySelector(elem).tagName)
@@ -105,47 +105,6 @@ const JSCCommon = {
 		}
 	},
 	// /mobileMenu
-
-	// tabs  .
-	tabscostume(tab) {
-
-		let tabs = {
-			Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
-			BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
-			Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
-		}
-		tabs.Btn.forEach((element, index) => {
-			element.addEventListener('click', () => {
-				if (!element.classList.contains('active')) {
-					let siblings = element.parentNode.querySelector(`.${tab}__btn.active`);
-					let siblingsContent = tabs.Content[index].parentNode.querySelector(`.${tab}__content.active`);
-					siblings.classList.remove('active');
-					siblingsContent.classList.remove('active')
-					element.classList.add('active');
-					tabs.Content[index].classList.add('active');
-				}
-			})
-		})
-		// $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
-
-		// });
-
-	},
-	// /tabs
-
-	inputMask() {
-		// mask for input
-		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
-		InputTel.forEach(function (element) {
-			element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}")
-		});
-		Inputmask("+9(999)999-99-99").mask(InputTel);
-	},
-	// /inputMask
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		if (isIE11) {
@@ -222,19 +181,17 @@ const $ = jQuery;
 function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 
 	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
-	let screenName;
-	screenName = '01.png';
-	if (screenName && x === "localhost:3000") {
-		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
+	// var x = window.location.host;
+	// let screenName;
+	// screenName = '01.png';
+	// if (screenName && x === "localhost:3000") {
+	// 	$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	// }
 
 	function whenResize() {
 		const topH = $("header ").innerHeight();
@@ -363,13 +320,6 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		spaceBetween: 27,
 	});
-
-	// window.setTimeout(function (){
-	// 	$.fancybox.open({
-	// 		src: '#modal-thanks',
-	// 		type: 'inline'
-	// 	});
-	// }, 1000)
 
 	//fix menu
 	$('.menu-mobile .navMenu__link').click(function (){
