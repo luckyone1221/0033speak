@@ -1,5 +1,4 @@
-//- menu
-mixin mnu()
+mixin mnuOld()
 	-
 		var nav= {
 			"О конференции": "#sRepresent",
@@ -11,4 +10,16 @@ mixin mnu()
 	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")&attributes(attributes)
 		each linkPatch, linkName in nav
 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
-//- /menu
+
+mixin mnu()
+	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")&attributes(attributes)
+		+e.LI.item( itemprop="item" )
+			+e.A.link(href='#sRepresent'  itemprop="url") О конференции
+		+e.LI.item( itemprop="item" )
+			+e.A.link(href='#sProgram'  itemprop="url") Программа
+		+e.LI.item( itemprop="item" )
+			+e.A.link(href='#sExponation'  itemprop="url") Выставка
+		+e.LI.item( itemprop="item" )
+			+e.A.link.active(href='#sTTickets'  itemprop="url") Билеты
+		+e.LI.item( itemprop="item" )
+			+e.A.link(href='#sPlace'  itemprop="url") Контакты

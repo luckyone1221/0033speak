@@ -5,7 +5,7 @@ mixin sTTickets(data)
 			+b.section-title
 				h2 БИЛЕТЫ
 			.row
-				+e.discount-col.col-md-4
+				+e.discount-col.col-lg-3
 					+e.corp-disc
 						b Корпоративные скидки
 						.text-sm считается автоматически при добавлении в корзину
@@ -48,10 +48,11 @@ mixin sTTickets(data)
 							| При предоставлении скана/фото документов, подтверждающих статус, –
 							|
 							span.text-danger 80%.
-				+e.price-col.col-md-8
+				+e.price-col.col-lg-9
 					+e.status
 						+e.name-col
-						+e.item-col.text-danger.s-item участник
+						+e.item-col.text-danger.s-item Офлайн участник
+						+e.item-col.text-danger.s-item Онлайн участник
 						+e.item-col.s-item
 							| Билет
 							br.d-none.d-md-block
@@ -59,30 +60,69 @@ mixin sTTickets(data)
 					+e.table
 						+e.border-lined
 							+ticketsItem('Участие во всех потоках программы')
-							+ticketsItem('Посещение выставки в холле')
+							+ticketsItem('Посещение выставки в холле', '+', '-' )
 							+ticketsItem('Презентации докладов')
-							+ticketsItem('Подкасты выступлений', '-', '+')
-							+ticketsItem('Материалы Paperless', '-', '+')
+							+ticketsItem('Подкасты выступлений')
+							+ticketsItem('Онлайн-выставка')
+							+ticketsItem('Кутеж (afterparty)', '-', '-', '+')
 						+e.line-row--price
 							+e.name-col
 								span Цена&nbsp;
-								span.text-danger сейчас
-							+e.item-col--price.text-danger 4 500 ₽
-							+e.item-col--price.text-danger 3 000 ₽
-						+e.line-row--price
-							+e.name-col Цена с 23.01.21
-							+e.item-col--price 9 500 ₽
+								span.txt-md.text-danger до 23 февраля
+								.txt-sm.mt-1 (При регистрации онлайн)
+							+e.item-col--price 5 000 ₽
+							+e.item-col--price 4 000 ₽
 							+e.item-col--price 3 000 ₽
+						//-
+						+e.line-row--price
+							+e.name-col
+								span Цена&nbsp;
+								span.txt-md.text-danger с 24 февраля по 22 марта
+								.txt-sm.mt-1 (При регистрации онлайн)
+							+e.item-col--price 5 500 ₽
+							+e.item-col--price 4 500 ₽
+							+e.item-col--price 3 000 ₽
+						//-
+						+e.line-row--price
+							+e.name-col
+								span Цена&nbsp;
+								span.txt-md.text-danger с 23 марта по 22 апреля
+								.txt-sm.mt-1 (При регистрации онлайн)
+							+e.item-col--price 6 000 ₽
+							+e.item-col--price 5 000 ₽
+							+e.item-col--price 3 000 ₽
+						//-
+						+e.line-row--price
+							+e.name-col
+								span Цена&nbsp;
+								span.txt-md.text-danger с 23 апреля по 26 мая
+								.txt-sm.mt-1 (При регистрации онлайн)
+							+e.item-col--price 6 500 ₽
+							+e.item-col--price 5 500 ₽
+							+e.item-col--price 3 000 ₽
+						//-
+						+e.line-row--price
+							+e.name-col
+								span Цена&nbsp;
+								span.txt-md.text-danger после 27 Мая
+								.txt-sm.mt-1 (При регистрации онлайн)
+							+e.item-col--price 7 000 ₽
+							+e.item-col--price 6 000 ₽
+							+e.item-col--price 3 000 ₽
+						//-buy
 						+e.line-row--btns
 							+e.name-col
 							+e.item-col
 								+e.btn(href="https://runet-id.com/event/spic21/" target='_blank') Купить
 							+e.item-col
 								+e.btn(href="https://runet-id.com/event/spic21/" target='_blank') Купить
+							+e.item-col
+								+e.btn(href="https://runet-id.com/event/spic21/" target='_blank') Купить
 	// end sTTickets
 
-mixin ticketsItem(name, partVal='+', noPartVal='-')
+mixin ticketsItem(name, onlineMember='+', offlineMember='+', aftParty='-')
 	+e.line-row&attributes(attributes)
 		+e.name-col=name
-		+e.item-col.text-danger=partVal
-		+e.item-col=noPartVal
+		+e.item-col.text-danger=onlineMember
+		+e.item-col=offlineMember
+		+e.item-col=aftParty
