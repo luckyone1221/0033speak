@@ -12,14 +12,14 @@ $mail->CharSet = 'utf-8';
 ///who send 
 $mail->setFrom('info@info.com','info info');
 
-$mail->addAddress('luckyone1221@gmail.com');
+$mail->addAddress('reg@sp-ic.ru');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 
 
 
 //Субъект
-$mail->Subject = 'Заявка с сайта СПИК 2021';
+$mail->Subject = 'Заявка с сайта СПИК 2021(Подписаться на рассылку)';
 
 $time = date('d.m.Y в H:i');
 $html = '
